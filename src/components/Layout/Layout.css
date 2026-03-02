@@ -1,0 +1,58 @@
+/* Fondo general negro */
+body {
+  margin: 0;
+  background-color: #0f0f0f;
+  font-family: 'Inter', sans-serif;
+  color: white;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 60px;
+  box-sizing: border-box;
+  background-color: #0f0f0f;
+}
+
+/* Logo */
+.navbar__logo img {
+  height: 40px;
+}
+
+/* Menu */
+.navbar__menu {
+  display: flex;
+  gap: 35px;
+}
+
+.navbar__menu a {
+  text-decoration: none;
+  color: #cfcfcf;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: 0.3s ease;
+}
+
+.navbar__menu a:hover {
+  color: white;
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+  background-color: #25D366;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  background-color: #1ebe5d;
+  transform: translateY(-2px);
+}
