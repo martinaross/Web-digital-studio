@@ -1,17 +1,9 @@
-import Servicios from "../../section/Servicios"
-import Proyectos from "../../section/Proyectos"
-import { Layout } from "../Layout/Layout"
 
+import { Router } from "../../router/Router"
 
 
 function App() {
-  return (
-    <Layout>
-      <Servicios />
-      <Proyectos />
-    </Layout>
-  )
+  return <Router />
 }
-
 
 export default App

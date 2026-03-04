@@ -1,4 +1,6 @@
 import { Layout } from "../../components/Layout/Layout";
+import Servicios from "../../section/Servicios"
+import Proyectos from "../../section/Proyectos"
 import "./Home.css";
 
 const Home = () => {
@@ -17,15 +19,21 @@ const Home = () => {
       </section>
 
       <section id="inicio">
-        <h1>Hero principal</h1>
+        <div class="container">
+          <div id="stars"></div>
+          <div id="stars2"></div>
+          <div id="stars3"></div>
+          <div></div>
+        </div>
+
       </section>
 
       <section id="servicios">
-        <h2>Servicios</h2>
+        <Servicios />
       </section>
 
       <section id="portfolio">
-        <h2>Portfolio</h2>
+        <Proyectos />
       </section>
 
       <section id="planes">
