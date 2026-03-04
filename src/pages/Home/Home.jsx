@@ -1,29 +1,31 @@
 import { Layout } from "../../components/Layout/Layout";
-import Servicios from "../../section/Servicios"
-import Proyectos from "../../section/Proyectos"
+import Servicios from "../../section/Servicios";
+import Proyectos from "../../section/Proyectos";
 import "./Home.css";
 
 const Home = () => {
   return (
     <Layout>
-      <section className="hero">
-        <div className="hero__content">
-          <h1 className="hero__title font-manrope">
-            Diseñar. Desarrollar. Potenciar.
-          </h1>
 
-          <p className="hero__subtitle font-inter">
-            Todo lo que necesitas para crear tu negocio digital
-          </p>
-        </div>
-      </section>
+      <section id="inicio" className="hero">
 
-      <section id="inicio">
-        <div class="container">
+
+        {/* fondo de estrellas SOLO del hero */}
+        <div className="hero__stars">
           <div id="stars"></div>
           <div id="stars2"></div>
           <div id="stars3"></div>
-          <div></div>
+        </div>
+
+        {/* texto del hero */}
+        <div className="hero__content">
+          <h1 className="hero__title font-manrope">
+            DISEÑAR. DESARROLLAR. POTENCIAR.
+          </h1>
+
+          <p className="hero__subtitle font-inter">
+            Construimos tu web, fortalecemos tu marca.
+          </p>
         </div>
 
       </section>
@@ -47,6 +49,7 @@ const Home = () => {
       <section id="contacto">
         <h2>Contacto</h2>
       </section>
+
     </Layout>
   );
 };

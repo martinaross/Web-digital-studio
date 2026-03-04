@@ -11,6 +11,7 @@
 
 
 
+
 /* Fondo general negro */
 body {
   margin: 0;
@@ -50,7 +51,7 @@ body {
 }
 
 .navbar__menu a:hover {
-  color: white;
+  color: rgb(238, 155, 61);
 }
 
 /* WhatsApp Button */
