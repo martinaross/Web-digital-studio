@@ -13,7 +13,7 @@ export default function Servicios() {
         <div className="block landing">
           <div className="content">
             <span className="badge">Servicio Principal</span>
-            <h2>Sitios Web</h2>
+            <h2>Sitios Web Originales</h2>
             <p>
               Landing Page . Sitios a medida · 
               Paginas Atogestionables.
