@@ -2179,3 +2179,151 @@
     transform: translateY(0);
   }
 }
+
+
+/* Section trabaja con nosotros */
+
+.process {
+  padding: 20px 5%;
+  background: #0f0f0f;
+}
+
+.process__container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.process__title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.process__subtitle {
+  color: #9a9a9a;
+  margin-bottom: 30px;
+}
+
+/* “card” usada como fondo detrás del título */
+.process__bg {
+  position: absolute;
+  inset: -30px -20px auto -20px;
+  height: 220px;
+  z-index: 0;
+  pointer-events: none;
+  /* NO molesta al mouse en el texto */
+}
+
+/* asegura que el texto quede arriba */
+.process__title,
+.process__subtitle {
+  position: relative;
+  z-index: 2;
+}
+
+/* para poder posicionar el fondo detrás */
+.process__left {
+  position: relative;
+}
+
+/*  círculos */
+.circle {
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(#FFA500, #FF6A00);
+  border-radius: 50%;
+  position: absolute;
+  filter: blur(7px);
+  opacity: 0.55;
+  animation: move-up6 2.2s ease-in-out infinite alternate;
+}
+
+.circle:nth-child(1) {
+  top: -30px;
+  left: -30px;
+}
+
+.circle:nth-child(2) {
+  bottom: -30px;
+  right: -30px;
+  animation-name: move-down1;
+}
+
+@keyframes move-up6 {
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes move-down1 {
+  to {
+    transform: translateY(10px);
+  }
+}
+
+/* CARDS */
+
+.process__right {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.process__card {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 18px;
+  padding: 18px;
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+
+  transition: all 0.3s ease;
+}
+
+/* interacción */
+.process__card:hover {
+  border: 1px solid #FF6A00;
+
+  /* glow detrás */
+  box-shadow:
+    0 0 25px rgba(255, 106, 0, 0.15),
+    0 0 60px rgba(255, 106, 0, 0.10);
+
+  /* leve elevación */
+  transform: translateY(-3px);
+}
+
+.process__number {
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 800;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.95);
+
+  background: linear-gradient(180deg, rgba(255, 213, 74, 0.95), rgba(255, 106, 0, 0.90));
+}
+
+/* texto de adentro de la card  */
+.process__card h4,
+.process__card h3 {
+  margin: 0 0 6px 0;
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.process__card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
