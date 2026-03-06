@@ -16,15 +16,11 @@
   width: 600px;
   height: 600px;
 
-  /* centro amarillo -> naranja -> transparente */
+
   background: radial-gradient(circle,
       #FFD54A 0%,
-      /* amarillo centro */
       #FF6A00 50%,
-      /* naranja */
-      transparent 70%
-      /* difuminado */
-    );
+      transparent 70%);
 
   filter: blur(120px);
   opacity: 0.7;
@@ -44,7 +40,6 @@
   }
 }
 
-/* estrellas SOLO dentro del hero */
 /* ESTE es el fondo naranja + estrellas SOLO en el hero */
 .hero__stars {
   position: absolute;
@@ -2263,9 +2258,7 @@
   }
 }
 
-/* =========================
-   CARDS TECNOLOGÍAS
-========================= */
+/*CARDS TECNOLOGÍAS*/
 .process__right {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -2273,8 +2266,6 @@
 }
 
 
-
-/* la card ya no necesita grid 90px/1fr si querés que sea más compacta */
 .process__card {
   display: flex;
   gap: 14px;
@@ -2351,7 +2342,6 @@
   flex-wrap: wrap;
   gap: 8px;
   margin-top: auto;
-  /* empuja chips al fondo */
   padding-top: 12px;
 }
 

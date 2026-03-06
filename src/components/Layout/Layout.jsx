@@ -36,7 +36,17 @@ const Layout = (props) => {
 
       <main>{props.children}</main>
 
-      <footer></footer>
+      <footer className="footer">
+        <div className="footer__container">
+          <p className="footer__copy">
+            © Copyright 2026 - Todos los derechos reservados | Política de privacidad
+          </p>
+
+          <p className="footer__dev">
+            Desarrollado por <span>Luciana Santana | Martina Rossignoli</span>
+          </p>
+        </div>
+      </footer>
     </>
   )
 }

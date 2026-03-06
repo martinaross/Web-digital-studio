@@ -70,3 +70,37 @@ body {
   background-color: #1ebe5d;
   transform: translateY(-2px);
 }
+
+/* FOOTER*/
+
+.footer {
+  width: 100%;
+  padding: 15px;
+  background: #000;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  box-sizing: border-box;
+}
+
+.footer__container {
+  max-width: 1200px;
+  margin: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__copy {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.footer__dev {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.footer__dev span {
+  color: #ffb85c;
+  font-weight: 500;
+}
