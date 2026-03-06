@@ -7,19 +7,30 @@ import logo from "../../assets/logo.webp"
 
 
 const Layout = (props) => {
+  const [menuOpen, setMenuOpen] = useState(false)
+
   return (
     <>
       <header className="navbar">
-        <div className="navbar__logo"><img src={logo} alt="imagen de logo" />
+        <button
+          className="navbar__toggle"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Abrir menú"
+        >
+          {menuOpen ? "✕" : "☰"}
+        </button>
+
+        <div className="navbar__logo">
+          <img src={logo} alt="imagen de logo" />
         </div>
 
-        <nav className="navbar__menu">
-          <a href="#inicio">Inicio</a>
-          <a href="#servicios">Servicios</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#planes">Planes</a>
-          <a href="#trabaja">Trabajá con nosotros</a>
-          <a href="#contacto">Contacto</a>
+        <nav className={`navbar__menu ${menuOpen ? "active" : ""}`}>
+          <a href="#inicio" onClick={() => setMenuOpen(false)}>Inicio</a>
+          <a href="#servicios" onClick={() => setMenuOpen(false)}>Servicios</a>
+          <a href="#portfolio" onClick={() => setMenuOpen(false)}>Portfolio</a>
+          <a href="#planes" onClick={() => setMenuOpen(false)}>Planes</a>
+          <a href="#trabaja" onClick={() => setMenuOpen(false)}>Trabajá con nosotros</a>
+          <a href="#contacto" onClick={() => setMenuOpen(false)}>Contacto</a>
         </nav>
 
         <div className="navbar__cta">
