@@ -16,6 +16,7 @@
 .projects-header h2 {
   font-size: clamp(2.8rem, 4vw, 3.5rem);
   margin-bottom: 15px;
+color: white;
 }
 
 .projects-header p {
@@ -23,47 +24,83 @@
 font-size: 25px;
 }
 
-/* CARD BASE */
-.project-card {
-  background: #111;
-  border: 1px solid rgba(255,106,0,0.25);
-  border-radius: 12px;
-  overflow: hidden;
-  transition: all 0.5s ease;
-  position: relative;
+.project-card{
+  background: linear-gradient(
+    135deg,
+  #2c2c2c,
+  #4a4a4a,
+  #7a7a7a
+  );
+  padding:3px;
+  border-radius:14px;
+  transition:.4s;
+}
+.project-inner{
+  background:#1a1a1a;
+  border-radius:12px;
+  overflow:hidden;
 }
 
-/* NEON GLOW */
-.project-card::before {
+.project-card::before{
   content: "";
   position: absolute;
-  inset: -1px;
-  border-radius: 12px;
+  inset: 0px;
+  border-radius: 16px;
+
   background: linear-gradient(
     45deg,
-    rgba(255,106,0,0.6),
-    transparent,
-    rgba(255,106,0,0.6)
+    #ff6a00,
+    #ff8c00,
+    #ff3c00,
+    #000000
   );
-  opacity: 0;
-  transition: 0.5s ease;
+
   z-index: -1;
+  transition: .6s cubic-bezier(.175,.885,.32,1.275);
 }
-.project-image {
+
+
+.project-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:#ff6a00;
+  filter:blur(20px);
+  opacity:.2;
+
+  z-index:-2;
+}
+
+.project-card:hover::before{
+  transform: rotate(-90deg) scaleX(1.2) scaleY(.8);
+}
+
+.project-card:hover::after{
+  filter: blur(55px);
+}
+
+.project-card{
+  box-shadow:
+  0 10px 40px rgba(0,0,0,0.8);
+}
+.project-card:hover{
+  transform:translateY(-12px);
+  box-shadow:
+  0 20px 60px rgba(0,0,0,0.9),
+  0 0 30px rgba(255,106,0,.4);
+}
+
+.project-image{
   height: 280px;
   overflow: hidden;
-  position: relative;
+  border-radius: 14px 14px 0 0;
 }
-
-.project-image img {
+.project-image img{
   width: 100%;
-  height: 85%;
-  transition: transform 4s ease;
-}
-
-/* efecto scroll en hover */
-.project-card:hover .project-image img {
-  transform: translateY(-40%);
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 
@@ -78,37 +115,7 @@ font-size: 25px;
 }
 
 .project-content p {
-  color:orange;
+  color: white;
   font-size: 0.95rem;
 }
 
-/* HOVER PRO */
-.project-card:hover {
-  transform: translateY(-12px) scale(1.02);
-  box-shadow:
-    0 0 10px rgba(255,106,0,0.4),
-    0 0 30px rgba(255,106,0,0.2),
-    0 25px 60px rgba(0,0,0,0.6);
-}
-
-.project-card:hover::before {
-  opacity: 1;
-}
-
-.project-card:hover .project-image::after {
-  background: linear-gradient(
-    to top,
-    rgba(255,106,0,0.2),
-    rgba(0,0,0,0.2)
-  );
-}
-
-/* PAGINATION DOTS */
-.swiper-pagination-bullet {
-  background: rgba(255,255,255,0.3);
-}
-
-.swiper-pagination-bullet-active {
-  background: #FF6A00;
-  box-shadow: 0 0 8px rgba(255,106,0,0.8);
-}
