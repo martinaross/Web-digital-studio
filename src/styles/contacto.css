@@ -1,0 +1,258 @@
+.contacto{
+  padding:100px 10%;
+  background:black;
+  color:white;
+}
+.contacto-container{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+.titulo-contacto::after{
+
+content:"";
+
+position:absolute;
+left:0;
+bottom:-10px;
+
+width:0;
+height:3px;
+
+background:linear-gradient(90deg,#ff7a00,#ffb347,#ff7a00);
+
+background-size:200%;
+
+transition:width .6s ease;
+
+}
+
+.titulo-contacto:hover::after{
+
+width:100%;
+animation:shine 2s linear infinite;
+
+}
+
+@keyframes shine{
+
+0%{background-position:0%}
+100%{background-position:200%}
+
+}
+.contacto-info{
+position: relative;
+  opacity:0;
+  transform:translateY(40px);
+  animation:fadeUp 1s ease forwards;
+}
+.contacto-info::before{
+  content:"";
+  position:absolute;
+  width:300px;
+  height:300px;
+  background:radial-gradient(circle,#ff7a00,transparent 70%);
+  left:-120px;
+  top:-80px;
+  filter:blur(80px);
+  opacity:.15;
+  z-index:-1;
+}
+@keyframes fadeUp{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+.contacto-info h2{
+  font-size:36px;
+  margin-bottom:20px;
+position:relative;
+}
+
+.contacto-info h2::after{
+  content:"";
+  width:80px;
+  height:3px;
+  background:linear-gradient(90deg,#ff7a00,#ffb347);
+  display:block;
+  margin-top:12px;
+}
+.highlight{
+  color:#ff7a00;
+}
+
+.contacto-info h3{
+  font-size:22px;
+  font-weight:500;
+  margin-bottom:15px;
+  color:#ddd;
+}
+
+.contacto-info p{
+  opacity:0.8;
+
+}
+
+.contacto-form{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  padding:40px;
+
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:14px;
+
+  box-shadow:
+  0 0 40px rgba(255,140,0,0.15),
+  inset 0 0 20px rgba(255,255,255,0.03);
+
+  position:relative;
+  overflow:hidden;
+}
+.contacto-form input,
+.contacto-form textarea{
+  padding:14px;
+  border:none;
+  border-radius:6px;
+  background:#1b1b1b;
+  color:white;
+}
+
+.contacto-form input::placeholder,
+.contacto-form textarea::placeholder{
+  color:#aaa;
+}
+.contacto-form::before{
+  content:"";
+  position:absolute;
+  width:300px;
+  height:300px;
+  background:radial-gradient(circle,#ff7a00,transparent 70%);
+  top:-100px;
+  right:-100px;
+  opacity:.35;
+  filter:blur(60px);
+}
+
+.contacto-form button{
+  padding:14px;
+  border:none;
+  border-radius:6px;
+  background:orange;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.contacto-form button:hover{
+  background:grey;
+}
+.btn-whatsapp {
+  color:#ff7a00;
+  text-decoration:none;
+text-align: center;
+justify-content: center;
+}
+.dato
+{text-align: center;
+text-decoration: none;
+color: #ff7a00;}
+.whatsapp-circle{
+
+position:relative;
+width:120px;
+height:120px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+}
+
+.text-circle{
+
+position:absolute;
+width:120px;
+height:120px;
+
+animation:rotateText 12s linear infinite;
+
+fill:#fff;
+font-size:10px;
+letter-spacing:3px;
+
+}
+@keyframes rotateText{
+
+from{
+transform:rotate(0deg);
+}
+
+to{
+transform:rotate(360deg);
+}
+
+}
+.whatsapp-icon{
+
+width:50px;
+height:50px;
+
+background:orange;
+border-radius:50%;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+color:white;
+font-size:24px;
+
+text-decoration:none;
+
+transition:0.3s;
+
+}
+.whatsapp-circle{
+
+position:relative;
+
+width:120px;
+height:120px;
+
+margin:auto;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+}
+
+.whatsapp-icon:hover{
+
+transform:scale(1.1);
+
+}
+/* responsive */
+
+@media (max-width:768px){
+
+.contacto-container{
+  grid-template-columns:1fr;
+}
+
+.contacto-info{
+  text-align:center;
+}
+
+}

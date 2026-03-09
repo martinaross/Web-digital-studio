@@ -17,56 +17,61 @@ export default function Proyectos() {
       </div>
 
       <Swiper
-        modules={[Autoplay, Pagination]}
-        spaceBetween={40}
-        slidesPerView={3}
-        autoplay={{ delay: 3500 }}
-        pagination={{ clickable: true }}
-        breakpoints={{
-          0: { slidesPerView: 1 },
-          768: { slidesPerView: 2 },
-          1200: { slidesPerView: 3 },
-        }}
-        className="projects-swiper"
-      >
-        <SwiperSlide>
-          <div className="project-card">
-            <div className="project-image">
-<img src={antartida} alt="Página Web Servicios" />
-</div>
-            <div className="project-content">
-              <h3>Pagina Web Servicios </h3>
-              <p>Sitio optimizado para conversión.</p>
-            </div>
-          </div>
-        </SwiperSlide>
+  modules={[Autoplay, Pagination]}
+  spaceBetween={40}
+  slidesPerView={3}
+  autoplay={{ delay: 3500 }}
+  pagination={{ clickable: true }}
+  breakpoints={{
+    0: { slidesPerView: 1 },
+    768: { slidesPerView: 2 },
+    1200: { slidesPerView: 3 },
+  }}
+  className="projects-swiper"
+>
 
-        <SwiperSlide>
-          <div className="project-card">
-            <div className="project-image proyecto2">
-<div className="project-image">
-  <img src={lapelu} alt="Página Web Servicios" />
-</div></div>
-            <div className="project-content">
-              <h3>Landing page</h3>
-              <p>Pagina web de servicios manicurista</p>
-            </div>
-          </div>
-        </SwiperSlide>
+  <SwiperSlide>
+    <div className="project-card">
+      <div className="project-image">
+        <img src={antartida} alt="Pagina Web Servicios"/>
+      </div>
 
-        <SwiperSlide>
-          <div className="project-card">
-            <div className="project-image proyecto3">
-<div className="project-image">
-  <img src={nails} alt="Página Web Servicios" />
-</div></div>
-            <div className="project-content">
-              <h3>Pagina web Peluqueria</h3>
-              <p>Diseño sutil y elegante</p>
-            </div>
-          </div>
-        </SwiperSlide>
-      </Swiper>
+      <div className="project-content">
+        <h3>Pagina Web Servicios</h3>
+        <p>Sitio web de servicios Frigoristas y calderistas.</p>
+      </div>
+    </div>
+  </SwiperSlide>
+
+
+  <SwiperSlide>
+    <div className="project-card">
+      <div className="project-image">
+        <img src={nails} alt="Landing page"/>
+      </div>
+
+      <div className="project-content">
+        <h3>Landing Page</h3>
+      <p>Landing page de servicios manicurista.</p>
+      </div>
+    </div>
+  </SwiperSlide>
+
+
+  <SwiperSlide>
+    <div className="project-card">
+      <div className="project-image">
+        <img src={lapelu} alt="Peluqueria"/>
+      </div>
+
+      <div className="project-content">
+        <h3>Página Web Peluquería</h3>
+        <p>Diseño sutil y elegante</p>
+      </div>
+    </div>
+  </SwiperSlide>
+
+</Swiper>
     </section>
   )
 }

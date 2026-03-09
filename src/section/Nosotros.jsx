@@ -5,7 +5,7 @@ export const Nosotros = () => {
   const [visible, setVisible] = useState(false);
   const sectionRef = useRef(null);
 
-  // Animación aparición
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
