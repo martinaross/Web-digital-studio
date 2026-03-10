@@ -64,7 +64,7 @@ main {
 
 /* Botón WhatsApp */
 .whatsapp-btn {
-  background-color: #25D366;
+  background-color: rgb(238, 155, 61);
   color: black;
   padding: 10px 20px;
   border-radius: 30px;
@@ -83,25 +83,35 @@ main {
 /* FOOTER */
 .footer {
   width: 100%;
-  padding: 15px;
+  padding: 16px 24px;
   background: #000;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .footer__container {
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 16px;
+  gap: 20px;
 }
 
 .footer__copy,
 .footer__dev {
-  font-size: 0.85rem;
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.4;
   color: rgba(255, 255, 255, 0.55);
+}
+
+.footer__copy {
+  max-width: 520px;
+}
+
+.footer__dev {
+  text-align: right;
 }
 
 .footer__dev span {
@@ -120,7 +130,9 @@ main {
   z-index: 1100;
 }
 
-/* TABLET Y CELULAR */
+/* =========================
+   TABLET + CELULAR
+   ========================= */
 @media (max-width: 900px) {
   .navbar {
     padding: 14px 20px;
@@ -176,8 +188,101 @@ main {
     padding-top: 85px;
   }
 
+  .footer {
+    padding: 18px 18px;
+  }
+
   .footer__container {
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     text-align: center;
+  }
+
+  .footer__copy,
+  .footer__dev {
+    font-size: 0.76rem;
+    line-height: 1.45;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .footer__copy {
+    max-width: 280px;
+  }
+
+  .footer__dev {
+    max-width: 260px;
+  }
+}
+
+/* =========================
+   CELULARES CHICOS
+   ========================= */
+@media (max-width: 480px) {
+  .footer {
+    padding: 16px 14px;
+  }
+
+  .footer__container {
+    gap: 6px;
+  }
+
+  .footer__copy,
+  .footer__dev {
+    font-size: 0.72rem;
+    line-height: 1.4;
+  }
+
+  .footer__copy {
+    max-width: 250px;
+  }
+
+  .footer__dev {
+    max-width: 220px;
+  }
+}
+
+/* =========================
+   COMPUTADORAS GRANDES
+   ========================= */
+@media (min-width: 1400px) {
+  .navbar {
+    padding: 22px 90px;
+  }
+
+  .navbar__logo img {
+    height: 46px;
+  }
+
+  .navbar__menu {
+    gap: 45px;
+  }
+
+  .navbar__menu a {
+    font-size: 1rem;
+  }
+
+  .whatsapp-btn {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+  }
+
+  main {
+    padding-top: 100px;
+  }
+
+  .footer {
+    padding: 18px 30px;
+  }
+
+  .footer__container {
+    max-width: 1400px;
+  }
+
+  .footer__copy,
+  .footer__dev {
+    font-size: 0.9rem;
   }
 }
