@@ -52,7 +52,7 @@ circle.style.setProperty("--moveY", `${y * 0.02}px`);
   <div className={`contenido ${visible ? "fade-content" : ""}`}>
     <h2 className="somos-title">
       Somos un estudio digital joven nacido en Mendoza,
-      con la convicción de que la <span>innovación</span> no es una opción,
+      Creemos que la <span>innovación</span> no es una opción,
       es el estándar.
     </h2>
 
