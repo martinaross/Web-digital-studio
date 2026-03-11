@@ -6,6 +6,9 @@ import "../styles/proyectos.css"
 import antartida from"../assets/imagenes/webantartida.png"
 import lapelu from"../assets/imagenes/lapeluweb.png"
 import nails from "../assets/imagenes/nailsweb.png"
+import servicios from "../assets/imagenes/servicio.png"
+import eccomerce from "../assets/imagenes/tienda.png"
+import zapateria from "../assets/imagenes/lyp.png"
 
 
 export default function Proyectos() {
@@ -16,61 +19,159 @@ export default function Proyectos() {
         <p>Algunos de nuestros desarrollos recientes</p>
       </div>
 
-      <Swiper
+ <Swiper
   modules={[Autoplay, Pagination]}
   spaceBetween={40}
   slidesPerView={3}
   autoplay={{ delay: 3500 }}
   pagination={{ clickable: true }}
+  loop={true}
+  grabCursor={true}
+
   breakpoints={{
     0: { slidesPerView: 1 },
     768: { slidesPerView: 2 },
     1200: { slidesPerView: 3 },
   }}
+
   className="projects-swiper"
 >
+ <SwiperSlide>
+  <div className="project-card">
 
-  <SwiperSlide>
-    <div className="project-card">
-      <div className="project-image">
-        <img src={antartida} alt="Pagina Web Servicios"/>
-      </div>
+    <div className="project-image">
+      <img src={antartida} alt="Pagina Web Servicios"/>
 
-      <div className="project-content">
+      <div className="project-overlay">
+        <span className="project-badge">Web</span>
         <h3>Pagina Web Servicios</h3>
         <p>Sitio web de servicios Frigoristas y calderistas.</p>
+        <button className="project-btn">Ver sitio</button>
       </div>
     </div>
-  </SwiperSlide>
+
+    <div className="project-info">
+      <h3>Climatización Antártida</h3>
+      <p>Web corporativa para empresa de climatización.</p>
+    </div>
+
+  </div>
+</SwiperSlide>
 
 
-  <SwiperSlide>
-    <div className="project-card">
-      <div className="project-image">
-        <img src={nails} alt="Landing page"/>
-      </div>
+<SwiperSlide>
+  <div className="project-card">
 
-      <div className="project-content">
-        <h3>Landing Page</h3>
-      <p>Landing page de servicios manicurista.</p>
+    <div className="project-image">
+      <img src={nails} alt="Landing page manicurista"/>
+
+      <div className="project-overlay">
+        <span className="project-badge">Landing Page</span>
+        <h3>Landing Manicurista</h3>
+        <p>Landing page profesional para servicios de uñas.</p>
+        <button className="project-btn">Ver sitio</button>
       </div>
     </div>
-  </SwiperSlide>
+
+    <div className="project-info">
+      <h3>Nails Studio</h3>
+      <p>Landing page para servicios de estética.</p>
+    </div>
+
+  </div>
+</SwiperSlide>
 
 
-  <SwiperSlide>
-    <div className="project-card">
-      <div className="project-image">
-        <img src={lapelu} alt="Peluqueria"/>
-      </div>
+<SwiperSlide>
+  <div className="project-card">
 
-      <div className="project-content">
+    <div className="project-image">
+      <img src={lapelu} alt="Página web peluquería"/>
+
+      <div className="project-overlay">
+        <span className="project-badge">Sitio Web</span>
         <h3>Página Web Peluquería</h3>
-        <p>Diseño sutil y elegante</p>
+        <p>Diseño moderno y elegante para salón de belleza.</p>
+        <button className="project-btn">Ver sitio</button>
       </div>
     </div>
-  </SwiperSlide>
 
+    <div className="project-info">
+      <h3>Salón de Belleza</h3>
+      <p>Web moderna para peluquería profesional.</p>
+    </div>
+
+  </div>
+</SwiperSlide>
+
+
+<SwiperSlide>
+  <div className="project-card">
+
+    <div className="project-image">
+      <img src={servicios} alt="Sitio Web Empresa"/>
+
+      <div className="project-overlay">
+        <span className="project-badge">Sitio Web</span>
+        <h3>Tienda Web Informativa</h3>
+        <p>Sitio web de servicios de climatización.</p>
+        <button className="project-btn">Ver sitio</button>
+      </div>
+    </div>
+
+    <div className="project-info">
+      <h3>Empresa de Servicios</h3>
+      <p>Web institucional para empresa técnica.</p>
+    </div>
+
+  </div>
+</SwiperSlide>
+
+
+<SwiperSlide>
+  <div className="project-card">
+
+    <div className="project-image">
+      <img src={zapateria} alt="Ecommerce Zapatería"/>
+
+      <div className="project-overlay">
+        <span className="project-badge">Ecommerce</span>
+        <h3>Tienda Online</h3>
+        <p>Ecommerce de calzados infantiles.</p>
+        <button className="project-btn">Ver sitio</button>
+      </div>
+    </div>
+
+    <div className="project-info">
+      <h3>Zapatería Infantil</h3>
+      <p>Tienda online con catálogo de productos.</p>
+    </div>
+
+  </div>
+</SwiperSlide>
+
+
+<SwiperSlide>
+  <div className="project-card">
+
+    <div className="project-image">
+      <img src={eccomerce} alt="Ecommerce tienda online"/>
+
+      <div className="project-overlay">
+        <span className="project-badge">Ecommerce</span>
+        <h3>Tienda Online</h3>
+        <p>Ecommerce autogestionable con carrito.</p>
+        <button className="project-btn">Ver sitio</button>
+      </div>
+    </div>
+
+    <div className="project-info">
+      <h3>Tienda Ecommerce</h3>
+      <p>Plataforma de ventas con carrito de compras.</p>
+    </div>
+
+  </div>
+</SwiperSlide>
 </Swiper>
     </section>
   )
