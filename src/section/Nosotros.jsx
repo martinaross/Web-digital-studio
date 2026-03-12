@@ -49,31 +49,35 @@ circle.style.setProperty("--moveY", `${y * 0.02}px`);
 
         <div className="main-row">
 
-  <div className={`contenido ${visible ? "fade-content" : ""}`}>
-    <h2 className="somos-title">
-      Somos un estudio digital joven nacido en Mendoza,
-      Creemos que la <span>innovación</span> no es una opción,
-      es el estándar.
-    </h2>
+ <div className={`contenido glass-card ${visible ? "fade-content" : ""}`}>
+  <h2 className="somos-title">
+    Somos un estudio digital joven nacido en Mendoza,
+    Creemos que la <span>innovación</span> no es una opción,
+    es el estándar.
+  </h2>
 
-    <p className="somos-subtitle">
-      Hace más de dos años acompañamos marcas y proyectos que buscan crecer,
-      diferenciarse y evolucionar en el ecosistema digital actual.
-    </p>
+  <p className="somos-subtitle">
+    Hace más de dos años acompañamos marcas y proyectos que buscan crecer,
+    diferenciarse y evolucionar en el ecosistema digital actual.
+  </p>
+</div>
+<div className="venn-container">
+
+  <div className="circle circle1">
+    <span className="circle-text">Compromiso</span>
   </div>
 
-  <div className="venn-container">
-    <div className="circle circle1"></div>
-    <div className="circle circle2"></div>
-    <div className="circle circle3"></div>
-
-    <div className="label label-top">Compromiso</div>
-    <div className="label label-left">Tecnología de avanzada</div>
-    <div className="label label-right">Diferénciate</div>
-
-    <div className="center-text">NOSOTROS</div>
+  <div className="circle circle2">
+    <span className="circle-text">Tecnología</span>
   </div>
 
+  <div className="circle circle3">
+    <span className="circle-text">Diferenciación</span>
+  </div>
+
+  <div className="center-text">NOSOTROS</div>
+
+</div>
 </div>
 </div>
     </section>
