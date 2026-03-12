@@ -3,6 +3,7 @@
   padding: 120px 6%;
 }
 
+
 /* GRID PUZZLE PRO */
 .services-grid {
   display: grid;
@@ -161,6 +162,11 @@ font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans 
 }
 
 @media (max-width: 992px) {
+.services{
+padding: 30px;}
+.projects-header  h2{
+font-size: 2rem 2rem;
+margin-bottom: 5px;}
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;

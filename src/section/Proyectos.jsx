@@ -46,7 +46,6 @@ export default function Proyectos() {
         <span className="project-badge">Web</span>
         <h3>Pagina Web Servicios</h3>
         <p>Sitio web de servicios Frigoristas y calderistas.</p>
-        <button className="project-btn">Ver sitio</button>
       </div>
     </div>
 
@@ -69,7 +68,6 @@ export default function Proyectos() {
         <span className="project-badge">Landing Page</span>
         <h3>Landing Manicurista</h3>
         <p>Landing page profesional para servicios de uñas.</p>
-        <button className="project-btn">Ver sitio</button>
       </div>
     </div>
 
@@ -92,7 +90,6 @@ export default function Proyectos() {
         <span className="project-badge">Sitio Web</span>
         <h3>Página Web Peluquería</h3>
         <p>Diseño moderno y elegante para salón de belleza.</p>
-        <button className="project-btn">Ver sitio</button>
       </div>
     </div>
 
@@ -115,7 +112,6 @@ export default function Proyectos() {
         <span className="project-badge">Sitio Web</span>
         <h3>Tienda Web Informativa</h3>
         <p>Sitio web de servicios de climatización.</p>
-        <button className="project-btn">Ver sitio</button>
       </div>
     </div>
 
@@ -138,7 +134,6 @@ export default function Proyectos() {
         <span className="project-badge">Ecommerce</span>
         <h3>Tienda Online</h3>
         <p>Ecommerce de calzados infantiles.</p>
-        <button className="project-btn">Ver sitio</button>
       </div>
     </div>
 
@@ -161,7 +156,6 @@ export default function Proyectos() {
         <span className="project-badge">Ecommerce</span>
         <h3>Tienda Online</h3>
         <p>Ecommerce autogestionable con carrito.</p>
-        <button className="project-btn">Ver sitio</button>
       </div>
     </div>
 
