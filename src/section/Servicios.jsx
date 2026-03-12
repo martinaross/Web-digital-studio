@@ -4,9 +4,9 @@ export default function Servicios() {
   return (
     <section className="services" id="services">
 <div className="projects-header">
-        <h2>Nuestros servicios</h2>
-        <p>Todo lo que necesites a tu alcance.</p>
-      </div>
+  <h2>Nuestros <span>servicios</span></h2>
+  <p>Todo lo que necesites a tu alcance.</p>
+</div>
       <div className="services-grid">
 
         {/* PROTAGONISTA */}

@@ -15,7 +15,7 @@ export default function Proyectos() {
   return (
     <section className="projects" id="projects">
       <div className="projects-header">
-        <h2>Nuestras Webs</h2>
+        <h2>Nuestras <span>Webs</span> </h2>
         <p>Algunos de nuestros desarrollos recientes</p>
       </div>
 
