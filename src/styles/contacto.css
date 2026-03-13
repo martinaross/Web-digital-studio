@@ -2,6 +2,10 @@
   padding:100px 10%;
   background:black;
   color:white;
+ background-image:url("../assets/imagenes/business-hand-with-mobile-phone.jpg");
+  background-size: cover;     
+  background-position: center; 
+  background-repeat: no-repeat; 
 }
 .contacto-container{
   max-width:1200px;
@@ -72,6 +76,7 @@ position: relative;
   font-size: 2.8rem;
   margin-bottom:20px;
 position:relative;
+color: #1b1b1b;
 }
 
 .contacto-info h2::after{
@@ -90,13 +95,13 @@ position:relative;
   font-size:22px;
   font-weight:500;
   margin-bottom:15px;
-  color:#ddd;
+  color:black;
 }
 
 .contacto-info p{
   opacity:0.8;
-
-}
+color: gray;
+font-weight: bold;}
 
 .contacto-form{
   display:flex;
@@ -124,7 +129,7 @@ position:relative;
   border:none;
   border-radius:6px;
   background:#1b1b1b;
-  color:white;
+  color:black;
 }
 
 .contacto-form input::placeholder,
@@ -148,7 +153,7 @@ position:relative;
   border:none;
   border-radius:6px;
   background:orange;
-  color:white;
+  color:black;
   font-weight:bold;
   cursor:pointer;
   transition:0.3s;
@@ -187,8 +192,8 @@ height:120px;
 
 animation:rotateText 12s linear infinite;
 
-fill:#fff;
-font-size:10px;
+fill:black;
+font-size:12px;
 letter-spacing:3px;
 
 }
@@ -215,7 +220,7 @@ display:flex;
 align-items:center;
 justify-content:center;
 
-color:white;
+color:black;
 font-size:24px;
 
 text-decoration:none;
