@@ -3,12 +3,12 @@ import { Autoplay, Pagination } from "swiper/modules"
 import "swiper/css"
 import "swiper/css/pagination"
 import "../styles/proyectos.css"
-import antartida from"../assets/imagenes/webantartida.png"
-import lapelu from"../assets/imagenes/lapeluweb.png"
-import nails from "../assets/imagenes/nailsweb.png"
-import servicios from "../assets/imagenes/servicio.png"
-import eccomerce from "../assets/imagenes/tienda.png"
-import zapateria from "../assets/imagenes/lyp.png"
+import antartida from"../assets/imagenes/webantartida.webp"
+import lapelu from"../assets/imagenes/lapeluweb.webp"
+import nails from "../assets/imagenes/nailsweb.webp"
+import servicios from "../assets/imagenes/servicio.webp"
+import eccomerce from "../assets/imagenes/tienda.webp"
+import zapateria from "../assets/imagenes/lyp.webp"
 
 
 export default function Proyectos() {
