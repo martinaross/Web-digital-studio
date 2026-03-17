@@ -1,8 +1,18 @@
 import "../styles/nosotros.css";
 import { useEffect, useRef, useState } from "react";
+import { Sparkles } from "lucide-react";
 
 export const Nosotros = () => {
   const [visible, setVisible] = useState(false);
+const [step, setStep] = useState(0);
+
+useEffect(() => {
+  if (visible) {
+    setTimeout(() => setStep(1), 200);  // titulo
+    setTimeout(() => setStep(2), 600);  // texto
+    setTimeout(() => setStep(3), 1000); // venn
+  }
+}, [visible]);
   const sectionRef = useRef(null);
 
 
@@ -35,34 +45,67 @@ circle.style.setProperty("--moveY", `${y * 0.02}px`);
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
+useEffect(() => {
+  const handleMouseMove = (e) => {
+    document.documentElement.style.setProperty("--x", e.clientX + "px");
+    document.documentElement.style.setProperty("--y", e.clientY + "px");
+  };
+
+  window.addEventListener("mousemove", handleMouseMove);
+  return () => window.removeEventListener("mousemove", handleMouseMove);
+}, []);
 
   return (
     <section ref={sectionRef} className="nosotros">
       <div className="nosotros-container">
 
-        <div className="header-row">
-          <h2 className={`titulo ${visible ? "reveal" : ""}`}>
-            Nosotros
-          </h2>
-          <div className={`line ${visible ? "line-reveal" : ""}`}></div>
-        </div>
+       <div className="header-row">
+  <h2 className={`titulo ${step >= 1 ? "reveal" : ""}`}>
+    Nosotros
+  </h2>
 
+  <div className={`line ${step >= 1 ? "line-reveal" : ""}`}></div>
+</div>
         <div className="main-row">
 
  <div className={`contenido glass-card ${visible ? "fade-content" : ""}`}>
-  <h2 className="somos-title">
-    Somos un estudio digital joven nacido en Mendoza,
-    Creemos que la <span>innovación</span> no es una opción,
-    es el estándar.
-  </h2>
+<h2 className="somos-title">
+  Somos un estudio digital joven <br />
+  nacido en Mendoza,
+</h2>
 
-  <p className="somos-subtitle">
-    Hace más de dos años acompañamos marcas y proyectos que buscan crecer,
-    diferenciarse y evolucionar en el ecosistema digital actual.
+<p className="highlight-line">
+  Creemos que la{" "}
+  <span className="icon-highlight">
+    <Sparkles size={18} />
+    innovación digital
+  </span>{" "}
+  no es una opción
+</p>
+
+<p className="highlight-line strong">
+  es el estándar.
+</p>
+
+<div className="somos-subtitle">
+  <p className="linea fade-line delay-1">
+    Hace más de <span>dos años</span>
+  </p>
+
+  <p className="linea fade-line delay-2">
+    acompañamos marcas y proyectos
+  </p>
+
+  <p className="linea fade-line delay-3">
+    que buscan crecer, diferenciarse y evolucionar
+  </p>
+
+  <p className="linea fade-line delay-4 highlight-final">
+    en el ecosistema digital actual.
   </p>
 </div>
-<div className="venn-container">
-
+</div>
+<div className={`venn-container ${step >= 3 ? "venn-show" : ""}`}>
   <div className="circle circle1">
     <span className="circle-text">Compromiso</span>
   </div>

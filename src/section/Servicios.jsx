@@ -4,8 +4,15 @@ export default function Servicios() {
   return (
     <section className="services" id="services">
 <div className="projects-header">
-  <h2>Nuestros <span>servicios</span></h2>
-  <p>Todo lo que necesites a tu alcance.</p>
+  <h2 className="title">
+    Nuestros <span className="gradient-text">servicios</span>
+  </h2>
+
+  <div className="title-line"></div>
+
+  <p className="subtitle">
+    Todo lo que necesites a tu alcance.
+  </p>
 </div>
       <div className="services-grid">
 

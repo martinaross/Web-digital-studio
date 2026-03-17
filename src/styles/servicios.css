@@ -2,6 +2,68 @@
   background: #0a0a0a;
   padding: 120px 6%;
 }
+.title {
+  font-size: 3rem;
+  font-weight: 500;
+  color: #fff;
+
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease forwards;
+}
+.gradient-text {
+  background: linear-gradient(
+    90deg,
+    #ff8c00,
+    #ffd000,
+    #ff8c00
+  );
+  background-size: 200%;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: gradientMove 3s linear infinite;
+}
+@keyframes gradientMove {
+  0% { background-position: 0%; }
+  100% { background-position: 200%; }
+}
+.title-line {
+  width: 0;
+  height: 2px;
+  margin: 15px 0;
+
+  background: linear-gradient(
+    90deg,
+    #ff8c00,
+    transparent
+  );
+
+  animation: expandLine 1s ease forwards;
+  animation-delay: 0.5s;
+}
+@keyframes expandLine {
+  to {
+    width: 180px;
+  }
+}
+@keyframes expandLine {
+  to {
+    width: 180px;
+  }
+}
+@keyframes fadeBlur {
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+.title:hover .gradient-text {
+  text-shadow:
+    0 0 10px rgba(255,140,0,0.8),
+    0 0 20px rgba(255,140,0,0.5);
+}
 
 
 /* GRID PUZZLE PRO */
