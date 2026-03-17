@@ -111,6 +111,92 @@ font-size: 1.1rem;
 .line-reveal {
   transform: scaleX(1);
 }
+.highlight-line {
+  font-size: 1.3rem;
+  color: #ccc;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.highlight-line:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.highlight-line:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.highlight-line.strong {
+  font-size: 1.6rem;
+  color: #fff;
+}
+.icon-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ff8c00;
+  margin-bottom: 15px;
+
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeUp 0.6s ease forwards;
+}
+.somos-title span {
+  transition: all 0.3s ease;
+}
+
+.somos-title span:hover {
+  text-shadow:
+    0 0 10px rgba(255,140,0,0.9),
+    0 0 20px rgba(255,140,0,0.7);
+}
+.icon-highlight {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  color: #ff8c00;
+  font-weight: 600;
+
+  text-shadow:
+    0 0 8px rgba(255,140,0,0.6);
+}
+
+.icon-highlight svg {
+  transform: translateY(-1px);
+  filter: drop-shadow(0 0 6px rgba(255,140,0,0.6));
+}
+.linea {
+  font-size: 1.1rem;
+  color: #aaa;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* delays progresivos */
+.delay-1 { animation: fadeUp 0.6s ease forwards; animation-delay: 0.4s; }
+.delay-2 { animation: fadeUp 0.6s ease forwards; animation-delay: 0.6s; }
+.delay-3 { animation: fadeUp 0.6s ease forwards; animation-delay: 0.8s; }
+.delay-4 { animation: fadeUp 0.6s ease forwards; animation-delay: 1s; }
+.linea span {
+  color: #ff8c00;
+  font-weight: 600;
+
+  text-shadow:
+    0 0 8px rgba(255,140,0,0.6);
+}
+.highlight-final {
+  font-size: 1.2rem;
+  color: #fff;
+
+  letter-spacing: 1px;
+}
+.linea:hover {
+  color: #fff;
+  transform: translateX(5px);
+  transition: all 0.3s ease;
+}
 
 .contenido::before{
   content: "";
@@ -154,6 +240,23 @@ font-size: 1.1rem;
   overflow: hidden;
   padding: 100px 20px;
 }
+.nosotros::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+
+  background: radial-gradient(
+    circle 400px at var(--x) var(--y),
+    rgba(255,140,0,0.12),
+    transparent 70%
+  );
+
+  pointer-events:none;
+  z-index:1;
+}
 .glass-card{
  position: relative;
   padding: 50px 60px;
@@ -174,6 +277,25 @@ font-size: 1.1rem;
     inset 0 1px 1px rgba(255,255,255,0.15);
 
   overflow: hidden;
+}
+.glass-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(255,140,0,0.15),
+    transparent 70%
+  );
+
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.glass-card:hover::before {
+  opacity: 1;
 }
 .glass-card::after{
   content:"";
@@ -428,6 +550,34 @@ font-size: clamp(12px, 1.4vw, 18px);
   max-width: 520px;
 }
 
+.venn-container {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 1s ease;
+}
+
+.venn-show {
+  opacity: 1;
+  transform: scale(1);
+}
+.line {
+  width: 120px;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(255,106,0,0.9),
+    rgba(255,106,0,0.4),
+    rgba(255,106,0,0.1)
+  );
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1s ease;
+}
+
+.line-reveal {
+  transform: scaleX(1);
+}
 @media (max-width:1024px){
 
 .venn-container{

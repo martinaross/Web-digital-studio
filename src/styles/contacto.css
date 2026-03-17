@@ -1,12 +1,11 @@
 .contacto{
   padding:100px 10%;
-  background:black;
-  color:white;
- background-image:url("../assets/imagenes/business-hand-with-mobile-phone.jpg");
+ background-image:url("../assets/imagenes/business-hand-with-mobile-phone.webp");
   background-size: cover;     
   background-position: center; 
   background-repeat: no-repeat; 
 }
+
 .contacto-container{
   max-width:1200px;
   margin:auto;
@@ -14,6 +13,8 @@
   grid-template-columns:1fr 1fr;
   gap:60px;
   align-items:center;
+position: relative;
+  z-index: 2;
 }
 .titulo-contacto::after{
 
@@ -96,11 +97,12 @@ color: #1b1b1b;
   font-weight:500;
   margin-bottom:15px;
   color:black;
+font-weight: bold;
 }
 
 .contacto-info p{
   opacity:0.8;
-color: gray;
+color: black;
 font-weight: bold;}
 
 .contacto-form{
@@ -171,7 +173,8 @@ justify-content: center;
 .dato
 {text-align: center;
 text-decoration: none;
-color: #ff7a00;}
+color: #ff7a00;
+font-weight: bold;}
 .whatsapp-circle{
 
 position:relative;
@@ -193,8 +196,9 @@ height:120px;
 animation:rotateText 12s linear infinite;
 
 fill:black;
-font-size:12px;
+font-size:15px;
 letter-spacing:3px;
+font-weight: bold;
 
 }
 @keyframes rotateText{
