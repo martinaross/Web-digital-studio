@@ -206,7 +206,6 @@ font-size: 1.1rem;
   background: radial-gradient(circle,
     rgba(255,140,0,.15),
     transparent 70%);
-  filter: blur(60px);
   z-index: -1;
 }
 .fade-content {
@@ -389,7 +388,7 @@ font-size: 1.1rem;
   top: -20%;
   left: -20%;
   z-index: -1;
-  filter: blur(40px);
+
 }
 
 
