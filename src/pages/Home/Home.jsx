@@ -1,7 +1,7 @@
 import { Layout } from "../../components/Layout/Layout";
 import Servicios from "../../section/Servicios";
 import Proyectos from "../../section/Proyectos";
-import {Nosotros} from "../../section/Nosotros"
+import Nosotros from "../../section/Nosotros"
 import Contacto from "../../section/Contacto"
 import "./Home.css";
 import { FaCode, FaServer, FaLayerGroup, FaRocket, FaSearch } from "react-icons/fa";
@@ -179,8 +179,8 @@ const Home = () => {
 
         </div>
       </section>
-{/* Nosotros */}
-<section id="nosotros">
+      {/* Nosotros */}
+      <section id="nosotros">
         <Nosotros />
       </section>
 

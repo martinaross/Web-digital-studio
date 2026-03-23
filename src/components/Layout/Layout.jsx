@@ -25,11 +25,21 @@ const Layout = (props) => {
         </div>
 
         <nav className={`navbar__menu ${menuOpen ? "active" : ""}`}>
-          <a href="#inicio" onClick={() => setMenuOpen(false)}>Inicio</a>
+
+          <NavLink to="/" onClick={() => setMenuOpen(false)}>
+            Inicio
+          </NavLink>
+
           <a href="#servicios" onClick={() => setMenuOpen(false)}>Servicios</a>
+
           <a href="#portfolio" onClick={() => setMenuOpen(false)}>Portfolio</a>
-          <a href="#planes" onClick={() => setMenuOpen(false)}>Planes</a>
+
+          <NavLink to="/planes" onClick={() => setMenuOpen(false)}>
+            Planes
+          </NavLink>
+
           <a href="#trabaja" onClick={() => setMenuOpen(false)}>Trabajá con nosotros</a>
+
           <a href="#contacto" onClick={() => setMenuOpen(false)}>Contacto</a>
         </nav>
 
