@@ -35,10 +35,6 @@ const Home = () => {
         <Servicios />
       </section>
 
-      <section id="nosotros">
-        <Nosotros />
-      </section>
-
       {/* PROYECTOS */}
       <section id="proyectos">
         <Proyectos />

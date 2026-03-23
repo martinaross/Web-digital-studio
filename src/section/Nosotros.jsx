@@ -105,15 +105,15 @@ const Nosotros = () => {
           </div>
 
           <div className={`venn-container ${step >= 3 ? "venn-show" : ""}`}>
-            <div className="circle circle1">
+            <div className="circlee circle1">
               <span className="circle-text">Compromiso</span>
             </div>
 
-            <div className="circle circle2">
+            <div className="circlee circle2">
               <span className="circle-text">Tecnología</span>
             </div>
 
-            <div className="circle circle3">
+            <div className="circlee circle3">
               <span className="circle-text">Diferenciación</span>
             </div>
 
