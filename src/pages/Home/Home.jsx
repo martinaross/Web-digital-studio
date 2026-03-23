@@ -9,7 +9,6 @@ import { FaCode, FaServer, FaLayerGroup, FaRocket, FaSearch } from "react-icons/
 const Home = () => {
   return (
     <Layout>
-
       {/* HERO */}
       <section id="inicio" className="hero">
 
@@ -43,6 +42,58 @@ const Home = () => {
       {/* PROYECTOS */}
       <section id="proyectos">
         <Proyectos />
+      </section>
+
+
+
+      {/* CÓMO TRABAJAMOS */}
+      <section id="trabaja">
+        <section className="why" id="elegirnos">
+
+          <div className="why__container">
+
+            <div className="why__head">
+              <h2 className="why__title">Cómo trabajamos</h2>
+
+              <ul className="why__bullets">
+                <li>Enfoque profesional</li>
+                <li>Código escalable</li>
+                <li>Comunicación constante</li>
+                <li>Soluciones a largo plazo</li>
+                <li>Trabajo en equipo</li>
+              </ul>
+            </div>
+
+            <div className="why__grid">
+
+              <article className="why__card">
+                <span>01</span>
+                <h3>Análisis UX</h3>
+                <p>Estrategia y estructura.</p>
+              </article>
+
+              <article className="why__card">
+                <span>02</span>
+                <h3>Desarrollo</h3>
+                <p>Código limpio y escalable.</p>
+              </article>
+
+              <article className="why__card">
+                <span>03</span>
+                <h3>Pruebas</h3>
+                <p>Validación y responsive.</p>
+              </article>
+
+              <article className="why__card">
+                <span>04</span>
+                <h3>Entrega</h3>
+                <p>Soporte post-lanzamiento.</p>
+              </article>
+
+            </div>
+
+          </div>
+        </section>
       </section>
 
       {/* TECNOLOGÍAS */}
@@ -123,54 +174,6 @@ const Home = () => {
                 </div>
               </div>
             </div>
-
-          </div>
-
-        </div>
-      </section>
-
-      {/* CÓMO TRABAJAMOS */}
-      <section className="why" id="elegirnos">
-
-        <div className="why__container">
-
-          <div className="why__head">
-            <h2 className="why__title">Cómo trabajamos</h2>
-
-            <ul className="why__bullets">
-              <li>Enfoque profesional</li>
-              <li>Código escalable</li>
-              <li>Comunicación constante</li>
-              <li>Soluciones a largo plazo</li>
-              <li>Trabajo en equipo</li>
-            </ul>
-          </div>
-
-          <div className="why__grid">
-
-            <article className="why__card">
-              <span>01</span>
-              <h3>Análisis UX</h3>
-              <p>Estrategia y estructura.</p>
-            </article>
-
-            <article className="why__card">
-              <span>02</span>
-              <h3>Desarrollo</h3>
-              <p>Código limpio y escalable.</p>
-            </article>
-
-            <article className="why__card">
-              <span>03</span>
-              <h3>Pruebas</h3>
-              <p>Validación y responsive.</p>
-            </article>
-
-            <article className="why__card">
-              <span>04</span>
-              <h3>Entrega</h3>
-              <p>Soporte post-lanzamiento.</p>
-            </article>
 
           </div>
 
