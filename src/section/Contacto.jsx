@@ -57,7 +57,7 @@ CONSULTANOS AHORA • WHATSAPP • CONSULTANOS AHORA •
 </svg>
 
 <a
-href="https://wa.me/5491144947508"
+href="https://wa.me/5492615611837"
 target="_blank"
 className="whatsapp-icon"
 >
@@ -68,7 +68,7 @@ className="whatsapp-icon"
 
             <div className="dato">
               <FaEnvelope className="icono" />
-              <span>contacto@tusitio.com</span>
+              <span>webdigitalstudio.ml@gmail.com</span>
             </div>
 
             <div className="dato">

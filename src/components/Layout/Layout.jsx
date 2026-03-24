@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { NavLink } from "react-router-dom"
 import "./Layout.css"
-import logo from "../../assets/logo.webp"
+import logo from "../../assets/logot.webp"
 
 
 
@@ -32,13 +32,13 @@ const Layout = (props) => {
 
           <a href="#servicios" onClick={() => setMenuOpen(false)}>Servicios</a>
 
-          <a href="#portfolio" onClick={() => setMenuOpen(false)}>Portfolio</a>
+          <a href="#projects" onClick={() => setMenuOpen(false)}>Portfolio</a>
 
           <NavLink to="/planes" onClick={() => setMenuOpen(false)}>
             Planes
           </NavLink>
 
-          <a href="#trabaja" onClick={() => setMenuOpen(false)}>Trabajá con nosotros</a>
+          <a href="#nosotros" onClick={() => setMenuOpen(false)}>Trabajá con nosotros</a>
 
           <a href="#contacto" onClick={() => setMenuOpen(false)}>Contacto</a>
         </nav>
