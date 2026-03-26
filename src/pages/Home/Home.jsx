@@ -30,7 +30,6 @@ const Home = () => {
 
       </section>
 
-      {/* SERVICIOS */}
       <section id="servicios">
         <Servicios />
       </section>

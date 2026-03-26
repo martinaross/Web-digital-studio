@@ -2671,7 +2671,7 @@
    ========================= */
 @media (min-width: 1400px) {
   .hero {
-    min-height: calc(100vh - 80px);
+    min-height: calc(120vh - 80px);
     padding: 0 60px;
   }
 
