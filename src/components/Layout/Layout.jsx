@@ -3,11 +3,10 @@ import { NavLink } from "react-router-dom"
 import "./Layout.css"
 import logo from "../../assets/logot.webp"
 
-
-
-
 const Layout = (props) => {
   const [menuOpen, setMenuOpen] = useState(false)
+
+  const closeMenu = () => setMenuOpen(false)
 
   return (
     <>
@@ -25,22 +24,29 @@ const Layout = (props) => {
         </div>
 
         <nav className={`navbar__menu ${menuOpen ? "active" : ""}`}>
-
-          <NavLink to="/" onClick={() => setMenuOpen(false)}>
+          <NavLink to="/" onClick={closeMenu}>
             Inicio
           </NavLink>
 
-          <a href="#servicios" onClick={() => setMenuOpen(false)}>Servicios</a>
+          <NavLink to="/#servicios" onClick={closeMenu}>
+            Servicios
+          </NavLink>
 
-          <a href="#projects" onClick={() => setMenuOpen(false)}>Portfolio</a>
+          <NavLink to="/#proyectos" onClick={closeMenu}>
+            Portfolio
+          </NavLink>
 
-          <NavLink to="/planes" onClick={() => setMenuOpen(false)}>
+          <NavLink to="/planes" onClick={closeMenu}>
             Planes
           </NavLink>
 
-          <a href="#nosotros" onClick={() => setMenuOpen(false)}>Trabajá con nosotros</a>
+          <NavLink to="/#trabaja" onClick={closeMenu}>
+            Trabajá con nosotros
+          </NavLink>
 
-          <a href="#contacto" onClick={() => setMenuOpen(false)}>Contacto</a>
+          <NavLink to="/#contacto" onClick={closeMenu}>
+            Contacto
+          </NavLink>
         </nav>
 
         <div className="navbar__cta">
@@ -53,7 +59,7 @@ const Layout = (props) => {
             WhatsApp
           </a>
         </div>
-      </header >
+      </header>
 
       <main>{props.children}</main>
 

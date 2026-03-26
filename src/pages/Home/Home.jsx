@@ -1,17 +1,32 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Layout } from "../../components/Layout/Layout";
 import Servicios from "../../section/Servicios";
 import Proyectos from "../../section/Proyectos";
-import Nosotros from "../../section/Nosotros"
-import Contacto from "../../section/Contacto"
+import Nosotros from "../../section/Nosotros";
+import Contacto from "../../section/Contacto";
 import "./Home.css";
 import { FaCode, FaServer, FaLayerGroup, FaRocket, FaSearch } from "react-icons/fa";
 
 const Home = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const section = document.querySelector(location.hash);
+
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [location]);
+
   return (
     <Layout>
       {/* HERO */}
       <section id="inicio" className="hero">
-
         <div className="hero__stars">
           <div id="stars"></div>
           <div id="stars2"></div>
@@ -27,7 +42,6 @@ const Home = () => {
             Construimos tu web, fortalecemos tu marca.
           </p>
         </div>
-
       </section>
 
       <section id="servicios">
@@ -39,14 +53,10 @@ const Home = () => {
         <Proyectos />
       </section>
 
-
-
       {/* CÓMO TRABAJAMOS */}
       <section id="trabaja">
         <section className="why" id="elegirnos">
-
           <div className="why__container">
-
             <div className="why__head">
               <h2 className="why__title">Cómo trabajamos</h2>
 
@@ -60,7 +70,6 @@ const Home = () => {
             </div>
 
             <div className="why__grid">
-
               <article className="why__card">
                 <span>01</span>
                 <h3>Análisis UX</h3>
@@ -84,18 +93,14 @@ const Home = () => {
                 <h3>Entrega</h3>
                 <p>Soporte post-lanzamiento.</p>
               </article>
-
             </div>
-
           </div>
         </section>
       </section>
 
       {/* TECNOLOGÍAS */}
       <section id="tecnologias" className="process">
-
         <div className="process__container">
-
           <div className="process__left">
             <div className="card">
               <div className="circle"></div>
@@ -110,7 +115,6 @@ const Home = () => {
           </div>
 
           <div className="process__right">
-
             <div className="process__card">
               <div className="process__number"><FaCode /></div>
               <div className="process__content">
@@ -169,11 +173,10 @@ const Home = () => {
                 </div>
               </div>
             </div>
-
           </div>
-
         </div>
       </section>
+
       {/* Nosotros */}
       <section id="nosotros">
         <Nosotros />
@@ -183,7 +186,6 @@ const Home = () => {
       <section id="contacto">
         <Contacto />
       </section>
-
     </Layout>
   );
 };
