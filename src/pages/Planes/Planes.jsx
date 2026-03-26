@@ -59,6 +59,12 @@ const planesData = [
 const Planes = () => {
   const [activeCard, setActiveCard] = useState(null);
 
+  const crearMensajeWhatsApp = (plan) => {
+    return encodeURIComponent(
+      `Hola, me interesa el servicio "${plan.nombre}" con valor ${plan.precio}. Quisiera recibir más información.`
+    );
+  };
+
   return (
     <Layout>
       <section className="planes-page">
@@ -95,37 +101,48 @@ const Planes = () => {
           className="planes-cards"
           onMouseLeave={() => setActiveCard(null)}
         >
-          {planesData.map((plan) => (
-            <article
-              key={plan.id}
-              className={`plan-card ${activeCard === plan.id ? "is-active" : ""}`}
-              onMouseEnter={() => setActiveCard(plan.id)}
-            >
-              <div className="plan-icon">
-                <div className="plan-icon-inner"></div>
-              </div>
+          {planesData.map((plan) => {
+            const mensaje = crearMensajeWhatsApp(plan);
+            const whatsappLink = `https://wa.me/5492615964429?text=${mensaje}`;
 
-              <h3 className="plan-name">{plan.nombre}</h3>
-              <p className="plan-description">{plan.descripcion}</p>
+            return (
+              <article
+                key={plan.id}
+                className={`plan-card ${activeCard === plan.id ? "is-active" : ""}`}
+                onMouseEnter={() => setActiveCard(plan.id)}
+              >
+                <div className="plan-icon">
+                  <div className="plan-icon-inner"></div>
+                </div>
 
-              <div className="plan-price-row">
-                <span className="plan-price">{plan.precio}</span>
-                <span className="plan-periodo">/ {plan.periodo}</span>
-              </div>
+                <h3 className="plan-name">{plan.nombre}</h3>
+                <p className="plan-description">{plan.descripcion}</p>
 
-              <button className="plan-button">{plan.boton}</button>
+                <div className="plan-price-row">
+                  <span className="plan-price">{plan.precio}</span>
+                  <span className="plan-periodo">/ {plan.periodo}</span>
+                </div>
 
-              <div className="plan-divider"></div>
+                <a
+                  href={whatsappLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="plan-button">{plan.boton}</button>
+                </a>
 
-              <h4 className="plan-includes-title">Qué incluye</h4>
+                <div className="plan-divider"></div>
 
-              <ul className="plan-list">
-                {plan.incluye.map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))}
-              </ul>
-            </article>
-          ))}
+                <h4 className="plan-includes-title">Qué incluye</h4>
+
+                <ul className="plan-list">
+                  {plan.incluye.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
+              </article>
+            );
+          })}
         </div>
       </section>
     </Layout>
