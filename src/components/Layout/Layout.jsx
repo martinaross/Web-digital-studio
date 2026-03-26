@@ -45,7 +45,7 @@ const Layout = (props) => {
 
         <div className="navbar__cta">
           <a
-            href="https://wa.me/549XXXXXXXXXX"
+            href="https://wa.me/5492615964429"
             target="_blank"
             rel="noopener noreferrer"
             className="whatsapp-btn"
