@@ -6,7 +6,7 @@ const planesData = [
   {
     id: 1,
     nombre: "Landing Page",
-    precio: "$120.000",
+    precio: "$170.000",
     periodo: "pago único",
     descripcion:
       "Ideal para emprendedores, marcas personales o negocios que necesitan presencia online clara y profesional.",
@@ -16,7 +16,7 @@ const planesData = [
       "Sección principal impactante",
       "Botón directo a WhatsApp",
       "Formulario de contacto",
-      "Optimización básica",
+      "Incluye hosting y dominio por 1 año.",
       "Entrega lista para publicar",
     ],
   },
